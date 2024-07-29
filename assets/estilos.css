@@ -1,0 +1,254 @@
+
+/** selector universal */
+*{
+    margin: 0px;
+    /** manejamos que las cajitas no se sobrepasen del contenedor */
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*Estilos para el menu y encabezado y titulo en medio*/
+.header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 60px;
+    color: rgb(0, 0, 0);
+}
+
+/*
+li{
+    /*los elementos en bloque los pone en linea 
+    display: inline-block;
+    list-style: none;
+    margin: .6rem; /** 1rem = 16px 
+    font-size: 20px;
+}*/
+
+.header-img {
+    margin: 0px 40px;
+    border-radius: 60px;
+    background-image: url("https://cdn.usegalileo.ai/stability/3f3b8f74-2fb4-4b72-95fd-de564082416f.png");
+    background-size: cover;
+    height: auto;
+    min-height: 550px;
+    display: flex;             
+    justify-content: center;    /* Centrar horizontalmente todo el contenido ya sea un h1, etc */
+    align-items: center;        /* Centrar verticalmente contenido ya sea un h1, etc */
+    background-position: center;
+    position: relative; /*relativa al contenedor*/
+    transition:  0.5s;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        box-shadow: 8px 8px;
+    
+    }
+}
+
+.header-img::before {
+    content: '';
+    position: absolute; /*absoluta para que se coloque encima de la imagen*/
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+}
+
+.titulo-img{
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+    position: relative;/*relativo encima de la imagen*/
+}
+
+
+h2{
+    font-size: 36px;
+    padding-left: 60px;
+    padding-top: 20px;
+    margin-top: 15px;
+}
+
+/*Estilos para la caja principal de minutos*/
+.seccion-caja{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*Estilos para las cajas que tienen coolores con prep y minutos*/
+
+.seccion-caja .cajas{
+    width: 30%;
+    height: 200px;
+    padding: 10px;
+    background-color: #dfa37b;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    box-shadow: 8px 8px;
+    transition: background-color 0.3s 
+    ease-in-out;
+    transition:  0.5s;
+    &:hover{
+        background-color: #1db11d;
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+
+   
+}
+
+.seccion-caja .cajas h3{
+    font-size: 44px;
+    
+}
+
+.seccion-caja .cajas p{
+    font-size: 24px;
+    line-height: 50px;
+}
+
+/*estilos para instrucciones y demas informacion*/
+
+.cajas-informacion{
+    margin: 50px;
+    padding: 15px 50px;
+    border-radius: 10px;
+    background-color: #d1d0d0;
+    transition: background-color 0.3s 
+    ease-in-out;
+    transition:  0.5s;
+    &:hover{
+        background-color: #dfa37b;
+        cursor: pointer;
+        transform: scale(1.02);
+        box-shadow: 8px 8px;
+    }
+}
+
+
+.cajas-informacion h3{
+    font-size: 36px;
+}
+
+.cajas-informacion p{
+    font-size: 20px;
+    line-height:60px;
+}
+
+.pie-pagina{
+    background-color: rgb(32, 11, 7);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    min-height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    &:hover{
+        background-color: #883d11;
+        cursor: pointer;
+    }
+}
+
+.pie-pagina h5{
+    font-size: 40px;
+} 
+
+
+/* Uso de media query para responsive */
+@media(max-width: 576px){
+
+    h1{
+        font-size: 20px;
+    }
+    .header-img{
+        height: auto;
+        min-height: 200px;
+        box-shadow: 8px 8px;
+        &:hover{
+           box-shadow: none;
+        }
+        
+    }
+    .titulo-img{
+        font-size: 30px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .seccion-caja{
+        justify-content:space-between;
+        margin-top: 0;
+    }
+
+    .seccion-caja .cajas{
+        width: 30%;
+        height: 100px;
+        padding:0px;
+        line-height:0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+       
+    }
+
+    .seccion-caja .cajas h3{
+        font-size: 20px;
+        
+    }
+    .seccion-caja .cajas p{
+        font-size: 20px;
+    }
+
+    .cajas-informacion{
+        box-shadow: 6px 6px;
+        margin-top: 0;
+    }
+    
+    .cajas-informacion h3{
+        font-size: 20px;
+    }
+
+    .cajas-informacion p{
+        font-size: 15px;
+        line-height:30px;
+    }
+
+
+    .pie-pagina h5{
+        font-size: 20px;
+    } 
+    
+    
+}
+
+@media(max-width: 768px){
+    h1{
+        font-size: 20px;
+    }
+    .header-img{
+        height: auto;
+        min-height: 300px;
+        box-shadow: 8px 8px;
+        &:hover{
+           box-shadow: none;
+        }
+    }
+}
+
